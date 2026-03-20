@@ -79,6 +79,55 @@ class BRImoApp extends StatelessWidget {
 
             ),
 
+             Positioned(
+               top: 122,
+                left: 23,
+                right: 23,
+                child: Container(
+                padding: const EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF0B56A7),
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: Colors.white24),
+                ),
+             child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                        const Text(
+                           "Saldo Rekening Utama",
+                           style: TextStyle(color: Colors.white70, fontSize: 12),
+                         ),
+                         const SizedBox(height: 8),
+                        Row(
+                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                           children: const [
+                          Text(
+                            "Rp6.627.006,00",
+                             style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.bold,
+                                ),
+                             ),
+                              Icon(Icons.visibility_off, color: Colors.white, size: 18),
+                             ],
+                            ),
+                            const Divider(color: Colors.white24, height: 25),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: const [
+                                Text(
+                                  "Semua Rekeningmu",
+                                  style: TextStyle(color: Colors.white, fontSize: 13),
+                                ),
+                                Icon(Icons.chevron_right, color: Colors.white, size: 16),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+
 
                   ],
                 ),
