@@ -163,6 +163,20 @@ class BRImoApp extends StatelessWidget {
                 ),
               ),
 
+    //IKLAN ATAS
+     Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+         child: Container(
+           height: 70,
+             decoration: BoxDecoration(
+                 borderRadius: BorderRadius.circular(20),
+                  image: DecorationImage(
+                    image: AssetImage('assets/iklan1.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
+              ),
 
           ],
 
@@ -172,6 +186,8 @@ class BRImoApp extends StatelessWidget {
     );
   }
 }
+
+
 
  Widget menuatas(IconData icon, String label, Color color) {
     return Column(
