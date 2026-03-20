@@ -14,17 +14,30 @@ class BRImoApp extends StatelessWidget {
           //child: Text("Home"),
           children: [
 
+              SizedBox(
+                height: 380,
+                child: Stack(
+                  clipBehavior: Clip.none,
+                  alignment: Alignment.topCenter,
+                  children: [
+
             //HEADER
-            Container(
+           Container(
               width: double.infinity,
               height: 200,
-              color: const Color(0xFF00529C),
               padding: const EdgeInsets.only(top: 60, left: 20),
 
-           child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
+              decoration: BoxDecoration(
+              image: DecorationImage(
+              image: AssetImage('assets/latar.png'), 
+                fit: BoxFit.cover,
+                   ),
+                 ),             
+
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
              
 
               Column(
@@ -65,6 +78,11 @@ class BRImoApp extends StatelessWidget {
               ),
 
             ),
+
+
+                  ],
+                ),
+              ),
 
 
           ],
