@@ -10,8 +10,43 @@ class BRImoApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Center(
-          child: Text("Home"),
+        body: Column(
+          //child: Text("Home"),
+          children: [
+
+            //HEADER
+            Container(
+              width: double.infinity,
+              height: 200,
+              color: const Color(0xFF00529C),
+              padding: const EdgeInsets.only(top: 60, left: 20),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text(
+                    "Selamat Pagi,",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 14,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Text(
+                    "Moh Rofiki",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+
+          ],
+
+
         ),
       ),
     );
