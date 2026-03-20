@@ -20,7 +20,14 @@ class BRImoApp extends StatelessWidget {
               height: 200,
               color: const Color(0xFF00529C),
               padding: const EdgeInsets.only(top: 60, left: 20),
-              child: Column(
+
+           child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+             
+
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: const [
                   Text(
@@ -40,7 +47,23 @@ class BRImoApp extends StatelessWidget {
                     ),
                   ),
                 ],
+              ), 
+              
+              //ICON NOTIF DAN CS
+                 Row(
+                  children: const[
+                    const Icon(Icons.notifications,color: Colors.white,),
+                      SizedBox(width: 10),
+                    const Icon(Icons.headset_mic,color: Colors.white,),
+                      SizedBox(width: 9),
+                                  
+                      ],
+                     ),
+
+
+                ],
               ),
+
             ),
 
 
