@@ -78,7 +78,37 @@ class BRImoApp extends StatelessWidget {
               ),
 
             ),
+          
+          //MENU CEPAT 
+            Positioned(
+              top: 115,
+              left: 16,
+              right: 16,
+              child: Container(
+                  padding: const EdgeInsets.only(top: 145, bottom: 20),
+                  decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(15),
+                  boxShadow: const [
+                BoxShadow(
+                    color: Colors.black12,
+                      blurRadius: 10,
+                            ),
+                          ],
+                        ),
+                    child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            menuatas(Icons.swap_horiz, "Transfer", Colors.blue),
+                            menuatas(Icons.account_balance_wallet, "BRIVA", Colors.teal),
+                            menuatas(Icons.water_drop, "PDAM", Colors.lightBlue),
+                            menuatas(Icons.phone_android, "Pulsa/Data", Colors.green),
+                          ],
+                        ),
+                      ),
+                    ),
 
+            //BOX SALDO
              Positioned(
                top: 122,
                 left: 23,
@@ -142,3 +172,17 @@ class BRImoApp extends StatelessWidget {
     );
   }
 }
+
+ Widget menuatas(IconData icon, String label, Color color) {
+    return Column(
+      children: [
+        CircleAvatar(
+          radius: 25,
+          backgroundColor: color,
+          child: Icon(icon, color: Colors.white),
+        ),
+        const SizedBox(height: 8),
+        Text(label, style: const TextStyle(fontSize: 11)),
+      ],
+    );
+  }
