@@ -10,8 +10,9 @@ class BRImoApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: Column(
+        body: SingleChildScrollView(
           //child: Text("Home"),
+          child: Column(
           children: [
 
               SizedBox(
@@ -233,9 +234,34 @@ class BRImoApp extends StatelessWidget {
                   ],
                 ),
               ),
-          ],
+  const SizedBox(height: 20),
+  
+//MENU BAWAH
+    Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+        child: GridView.count(
+        shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
+        crossAxisCount: 4,
+        children: [
+          menubawah(Icons.add_box, "Top Up"),
+          menubawah(Icons.credit_card, "BRIZZI"),
+          menubawah(Icons.receipt, "Tagihan"),
+          menubawah(Icons.send, "Transfer"),
+          menubawah(Icons.card_giftcard, "Lifestyle"),
+          menubawah(Icons.atm, "Setor & Tarik"),
+          menubawah(Icons.book, "Catatan"),
+          menubawah(Icons.trending_up, "Investasi"),
+          menubawah(Icons.favorite, "Donasi"),
+          menubawah(Icons.currency_exchange, "Konvirmasi Valas"),
+          menubawah(Icons.credit_score, "Kartu Kredit"),
+          menubawah(Icons.security, "Asuransi"),
+              ],
+            ),
+          ),
+        ],
 
-
+          ),
         ),
       ),
     );
@@ -255,5 +281,18 @@ class BRImoApp extends StatelessWidget {
         const SizedBox(height: 8),
         Text(label, style: const TextStyle(fontSize: 11)),
       ],
+    );
+  }
+
+    Widget menubawah(IconData icon, String label) {
+    return SizedBox(
+      width: 70,
+      child: Column(
+        children: [
+          Icon(icon, color: Colors.blue, size: 30),
+          const SizedBox(height: 8),
+          Text(label, textAlign: TextAlign.center, style: const TextStyle(fontSize: 11)),
+        ],
+      ),
     );
   }
