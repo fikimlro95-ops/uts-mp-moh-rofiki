@@ -178,6 +178,61 @@ class BRImoApp extends StatelessWidget {
                 ),
               ),
 
+      const SizedBox(height: 20),
+
+      //CARI FITUR DAN ATUR
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Row(
+        children: [
+          Expanded(
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                  decoration: BoxDecoration(
+                    color: Colors.grey[100],
+                    borderRadius: BorderRadius.circular(25),
+                      ),
+                    child: Row(
+                      children: const [
+                         Icon(Icons.search, color: Colors.grey, size: 20),
+                            SizedBox(width: 10),
+                            Text("Cari Fitur", style: TextStyle(color: Colors.grey)),
+                          ],
+                        ),
+                      ),
+                    ),
+
+        const SizedBox(width: 15),
+
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+          decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(25),
+          boxShadow: const [
+          BoxShadow(
+          color: Colors.black12,blurRadius: 5,
+                 ),
+              ],
+           ),
+          child: Row(
+          children: const [
+          Icon(Icons.edit_note, color: Colors.blue, size: 20),
+          SizedBox(width: 4),
+            Text(
+             "Atur",
+              style: TextStyle(
+                  color: Colors.blue,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
           ],
 
 
