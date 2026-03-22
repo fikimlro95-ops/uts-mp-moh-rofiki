@@ -259,6 +259,48 @@ class BRImoApp extends StatelessWidget {
               ],
             ),
           ),
+
+//IKLAN BAWAH 
+Padding(
+  padding: const EdgeInsets.symmetric(horizontal: 20),
+  child: Column(
+  crossAxisAlignment: CrossAxisAlignment.start,
+  children: [
+
+                        
+  const Text(
+        "Spesial Untukmu",
+   	 style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold,
+    ),
+  ),
+
+  const SizedBox(height: 5),
+
+                        
+  const Text(
+   	"Cobain beragam cara baru untuk memaksimalkan aktivitas perbankan kamu",
+  style: TextStyle(fontSize: 12,color: Colors.grey,
+   ),
+),
+
+const SizedBox(height: 15),
+
+                       
+  Container(
+    width: double.infinity,
+    height: 200, 
+    decoration: BoxDecoration(
+    borderRadius: BorderRadius.circular(12),
+    image: DecorationImage(
+    image: AssetImage('assets/iklan2.png'),
+    fit: BoxFit.contain,
+      ),
+    ),
+  ),
+  
+   ],
+  ),
+), 
         ],
 
           ),
