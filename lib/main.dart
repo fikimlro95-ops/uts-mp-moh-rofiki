@@ -305,6 +305,64 @@ const SizedBox(height: 15),
 
           ),
         ),
+//TOMBOL NAVIGASI
+bottomNavigationBar: BottomNavigationBar(
+  currentIndex: 0,
+  selectedItemColor: Colors.blue,
+  unselectedItemColor: Colors.grey,
+  type: BottomNavigationBarType.fixed,
+  items: const [
+  BottomNavigationBarItem(
+    icon: Icon(Icons.home),
+    label: "Home",
+    ),
+  BottomNavigationBarItem(
+    icon: Icon(Icons.receipt_long),
+    label: "Mutasi",
+  ),
+  BottomNavigationBarItem(
+    icon: Icon(Icons.circle, size: 0), 
+    label: "",
+  ),
+  BottomNavigationBarItem(
+    icon: Icon(Icons.list_alt),
+    label: "Aktivitas",
+  ),
+  BottomNavigationBarItem(
+    icon: Icon(Icons.person),
+    label: "Akun",
+  ),
+    ],
+  ),
+
+//QRIS
+  floatingActionButton: Container(
+    width: 70,
+    height: 70,
+    decoration: const BoxDecoration(
+    shape: BoxShape.circle,
+    color: Colors.white,
+),
+  child: Center(
+  child: Container(
+    width: 55,
+    height: 55,
+  decoration: const BoxDecoration(
+    shape: BoxShape.circle,
+    color: Colors.blue,
+),
+  child: const Icon(
+    Icons.qr_code,
+    color: Colors.white,
+    size: 30,
+      ),
+    ),
+  ),
+),
+
+floatingActionButtonLocation:
+FloatingActionButtonLocation.centerDocked,
+        
       ),
     );
   }
